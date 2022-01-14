@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="carregarPokedex()">
+  <header>
+    <h1>Pokedex</h1>
+  </header>
+  <main>
+    <form class="pokedex-control" onsubmit="verificarFiltros(); return false">
+      <div class="form-control">
+        <label for="filter-name">Name:</label>
+        <input type="text" id="filter-name" onchange="verificarFiltros()">
+      </div>
+      <div class="form-control">
+        <label for="filter-type">Type:</label>
+        <select id="filter-type" onchange="verificarFiltros()">
+          <option value="">All</option>
+          <option value="normal">Normal</option>
+          <option value="dragon">Dragon</option>
+          <option value="grass">Grass</option>
+          <option value="poison">Poison</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="electric">Electric</option>
+          <option value="bug">Bug</option>
+          <option value="flying">Flying</option>
+          <option value="fairy">Fairy</option>
+          <option value="psychic">Psychic</option>
+          <option value="rock">Rock</option>
+          <option value="ice">Ice</option>
+          <option value="ghost">Ghost</option>
+          <option value="steel">Steel</option>
+          <option value="fighting">Fighting</option>
+          <option value="ground">Ground</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="sort">Sort:</label>
+        <select id="sort-type" onchange="verificarFiltros()">
+          <option value="crescentnumber">Lowest Number (First)</option>
+          <option value="decrescentnumber">Highest Number (First)</option>
+          <option value="crescentletter">A-Z</option>
+          <option value="decrescentletter">Z-A</option>
+        </select>
+      </div>
+    </form>
+    <section class="pokedex" id="pokedex"></section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
