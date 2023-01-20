@@ -5,7 +5,7 @@ let pokemonsChanged;
 let pokedex = document.getElementById('pokedex');
 
 async function carregarPokedex() {
-    await fetch('./../data/pokedex.json').then(res => res.json()).then(data => {pokemons = data;});
+    await fetch('/script/pokedex.json').then(res => res.json()).then(data => {pokemons = data;});
 
     construirPokedex(pokemons);
 }
